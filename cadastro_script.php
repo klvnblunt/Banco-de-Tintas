@@ -33,8 +33,9 @@
                 if (mysqli_query($conexao, $sql)) {
                     mensagem ("$nome cadastrado com sucesso!", 'success');
                 } else
-                    echo mensagem ("$nome NÃO cadastrado!", 'dangfer');
+                    echo mensagem ("$nome NÃO cadastrado!", 'danger');
             ?>
+            <a href = "index.php" class = "btn btn-primary"> Voltar</a> 
         </div>
     </div>
     
