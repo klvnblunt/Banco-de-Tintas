@@ -31,9 +31,9 @@
                 (`nome`, `endereco`, `telefone`, `email`, `data_nacimento`) VALUES ('$nome','$endereco','$telefone','$email','$dtnacimento')";
 
                 if (mysqli_query($conexao, $sql)) {
-                    echo "$nome cadastrado com sucesso!";
+                    mensagem ("$nome cadastrado com sucesso!", 'success');
                 } else
-                    echo "$nome Não cadastrado!";
+                    echo mensagem ("$nome NÃO cadastrado!", 'dangfer');
             ?>
         </div>
     </div>
