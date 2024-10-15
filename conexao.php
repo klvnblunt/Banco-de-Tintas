@@ -1,7 +1,7 @@
 <?php
 $host = 'localhost';
 $user = 'root';
-$password = 'jH@c69MC1['; // Se não houver senha
+$password = ''; 
 $database = 'cadastro_tinta';
 
 $conexao = mysqli_connect($host, $user, $password, $database);

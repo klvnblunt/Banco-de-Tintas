@@ -20,9 +20,10 @@
                 $telefone = $_POST['telefone'];
                 $email = $_POST['email'];
                 $dtnacimento = $_POST['dtnacimento'];
+                $senha = $_POST['senha'];
 
                 $sql = "INSERT INTO `usuario`
-                (`nome`, `endereco`, `telefone`, `email`, `data_nacimento`) VALUES ('$nome','$endereco','$telefone','$email','$dtnacimento')";
+                (`nome`, `endereco`, `telefone`, `email`, `data_nacimento`, `senha`) VALUES ('$nome','$endereco','$telefone','$email','$dtnacimento', '$senha')";
 
                 if (mysqli_query($conexao, $sql)) {
                     mensagem ("$nome cadastrado com sucesso!", 'success');

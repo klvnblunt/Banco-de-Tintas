@@ -13,31 +13,15 @@
     <div class ="container">
         <div class = "row">
             <div class = "col">
-                <h1>Cadastro</h1>
+                <h1>Entrar</h1>
                 <form action= "cadastro_script.php" method="POST">
                     <div class="mb-3">
-                        <label for="nome" class="form-label">Nome Completo</label>
-                        <input type="text" class="form-control" name="nome" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="endereco" class="form-label">Endereço</label>
-                        <input type="text" class="form-control" name="endereco" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="telefone" class="form-label">Telefone</label>
-                        <input type="text" class="form-control" name="telefone" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
+                        <label for="email" value = "" class="form-label">Email</label>
                         <input type="email" class="form-control" name="email" required>
                     </div>
                     <div class="mb-3">
                         <label for="senha" class="form-label">Senha</label>
                         <input type="password" class="form-control" name="senha" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="dtnacimento" class="form-label">Data de nacimento</label>
-                        <input type="date" class="form-control" name="dtnacimento" required>
                     </div>
                     <div class="mb-3">
                         <input type="submit" class="btn btn-success">

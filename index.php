@@ -15,7 +15,7 @@
         <div class = "row">
             <div class = "col">
                 <p class="fs-1">Banco de Tintas</p>
-                <button type="button" class="btn btn-primary btn-lg">Entrar</button>
+                <a href = "login.php" class="btn btn-primary btn-lg">Entrar</a>
                 <a href = "cadastro.php" class = "btn btn-primary btn-lg">Cadastrar</a>
                 </div>
         </div>
