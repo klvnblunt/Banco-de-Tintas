@@ -33,7 +33,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="senha" class="form-label">Senha</label>
-                        <input type="password" class="form-control" name="senha" required>
+                        <input type="password" class="form-control" name="senha" >
                     </div>
                     <div class="mb-3">
                         <label for="dtnacimento" class="form-label">Data de nacimento</label>

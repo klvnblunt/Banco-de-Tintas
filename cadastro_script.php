@@ -13,7 +13,7 @@
     <div class ="container">
         <div class = "row">
             <?php 
-                include "conexao.php";
+                include_once "conexao.php";
 
                 $nome = $_POST['nome'];
                 $endereco = $_POST['endereco'];
