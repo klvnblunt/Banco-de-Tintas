@@ -13,6 +13,12 @@
 </head>
 
 <body>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success border-botton shadow-sm mb-3">
+        <div class="container">
+            <a class="navbar-brand" href=""><strong>Banco de Tintas</strong></a>
+        </div>
+  </nav>
   <div class="container">
     <div class="row">
       <?php
@@ -40,7 +46,10 @@
       }
       ?>
 
-      <a href="index.php" class="btn btn-primary"> Voltar</a>
+      <a href="index.php" class="btn btn-primary"> Voltar</a> <br>
+      <br>
+      <br>
+      <a href="tela_inicial.php" class="btn btn-primary"> Ir para a tela inicial</a>
     </div>
   </div>
 

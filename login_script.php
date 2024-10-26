@@ -21,7 +21,7 @@ if (!$user) {
 if ($user && password_verify($senha, $user['senha'])) {
     // Login bem-sucedido, criar uma sessão para o usuário
     $_SESSION['usuario'] = $user['nome'];
-    header("Location: index.php"); // Redirecionar para uma página inicial (home)
+    header("Location: tela_inicial.php"); // Redirecionar para uma página inicial (home)
     exit;
 } else {
     // Falha no login, exibir mensagem de erro
