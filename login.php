@@ -10,14 +10,6 @@
     </style>
 </head>
   <body>
-  <?php
-    if (isset($erro) && count($erro) > 0) {
-        foreach($erro as $msg) {
-            echo "<p>$msg</p>";
-        }
-    }
-?>
-
     <div class ="container">
         <div class = "row">
             <div class = "col">
