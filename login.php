@@ -12,7 +12,7 @@
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-success border-botton shadow-sm mb-3">
         <div class="container">
-            <a class="navbar-brand" href=""><strong>Banco de Tintas</strong></a>
+            <a class="navbar-brand" href=""><img src="banco_tintas.jpg" width="50" height="50" class="d-inline-block align-top"><strong>Banco de Tintas </strong></a>
         </div>
     </nav>
     <div class ="container">

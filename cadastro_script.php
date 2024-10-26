@@ -46,9 +46,7 @@
       }
       ?>
 
-      <a href="index.php" class="btn btn-primary"> Voltar</a> <br>
-      <br>
-      <br>
+      <a href="index.php" class="btn btn-primary"> Voltar</a>
       <a href="tela_inicial.php" class="btn btn-primary"> Ir para a tela inicial</a>
     </div>
   </div>
