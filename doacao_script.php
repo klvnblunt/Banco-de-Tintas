@@ -22,19 +22,18 @@
       }
 
       if (isset($_POST['submit'])) {
-        echo "Formulario enviado";
         
-          $data_validade = $_POST['data_validade'];
-          $litro = $_POST['litro'];
-          $qt_lata = $_POST['qt_lata'];
-          $cor = $_POST['cor'];
-          $tipo_tinta = $_POST['tipo_tinta'];
-          $tm_embalagem = $_POST['tm_embalagem'];
-          $marca = $_POST['marca'];
+          $data_validade = isset($_POST['data_validade']) ? $_POST['data_validade'] : null;
+          $litro = isset( $_POST['litro']) ? $_POST['litro'] : null;
+          $qt_latas = isset($_POST['qt_lata']) ? $_POST['qt_lata'] : null;
+          $cor = isset($_POST['cor']) ? $_POST['cor'] : null;
+          $tipo_tinta = isset($_POST['tipo_tinta']) ? $_POST['tipo_tinta'] : null;
+          $tm_embalagem = isset($_POST['tm_embalagem']) ? $_POST['tm_embalagem'] : null;
+          $marca = isset($_POST['marca']) ? $_POST['marca'] : null;
 
           $result = mysqli_query($conexao, "INSERT INTO `doacao`
-                      (`data_validade`, `qt_litro`, `qt_lata`, `cor`, `tipo`, `tamanho`, `marca`) 
-                      VALUES ('$data_validade', '$litro', '$qt_lata', '$cor', '$tipo_tinta', '$tm_embalagem', '$marca')");
+                      (`data_validade`, `qt_litro`, `qt_latas`, `cor`, `tipo`, `tamanho`, `marca`) 
+                      VALUES ('$data_validade', '$litro', '$qt_latas', '$cor', '$tipo_tinta', '$tm_embalagem', '$marca')");
 
           if ($result) {
               echo mensagem("Doação feita com sucesso", 'success');

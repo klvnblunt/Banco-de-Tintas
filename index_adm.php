@@ -17,9 +17,8 @@
             <div class ="align-self-end">
               <div class = "align-self-end">
                 <div class = "align-self-end">
-                  <a href = "login.php" class="btn btn-primary btn-lg">Entrar</a>
-                  <a href = "cadastro.php" class = "btn btn-primary btn-lg">Cadastrar</a>
-                  <a href = "index_adm.php" class = "btn btn-primary btn-lg">Area do aluno</a>
+                  <a href = "login_adm.php" class="btn btn-primary btn-lg">Entrar</a>
+                  <a href = "cadastro_adm.php" class = "btn btn-primary btn-lg">Cadastrar</a>
                 </div>
         </div>
     </nav>
@@ -30,4 +29,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
-
