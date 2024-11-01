@@ -19,7 +19,7 @@
         <div class = "row">
             <div class = "col">
                 <h1>Entrar</h1>
-                <form action= "login_script.php" method="POST">
+                <form action= "login_adm_script.php" method="POST">
                     <div class="mb-3">
                         <label for="email"  class="form-label">Email</label>
                         <input type="email" class="form-control" name="email" value = "" required>
@@ -33,7 +33,7 @@
                     </div>
                 </form>
 
-                <a href="index.php" class = "btn btn-info">Voltar para o inicio</a>
+                <a href="index_adm.php" class = "btn btn-info">Voltar para o inicio</a>
             </div>
         </div>
     </div>

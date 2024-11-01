@@ -1,3 +1,6 @@
+<?php
+  include('protecao.php');
+?>
 <!doctype html>
 <html lang="pt">
   <head>
