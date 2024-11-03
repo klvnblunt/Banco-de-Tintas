@@ -13,10 +13,6 @@
     </style>
   </head>
   <body>
-  <?php
-    include('protecao.php');
-  ?>
-    
     <nav class="navbar navbar-expand-lg navbar-dark bg-success border-botton shadow-sm mb-3">
         <div class="container">
         <a class="navbar-brand" href=""><img src="banco_tintas.jpg" width="50" height="50" class="d-inline-block align-top mr-2"><strong class="align-center">Banco de Tintas</strong></a>
