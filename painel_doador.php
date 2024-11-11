@@ -29,6 +29,7 @@
       <th scope="col">Tipo de Tinta</th>
       <th scope="col">Tamanho da Lata</th>
       <th scope="col">Marca</th>
+      <th scope="col">Contato</th>
     </tr>
   </thead>
   <tbody>
@@ -46,6 +47,7 @@
         $tipo = $linhas['tipo'];
         $tamanho = $linhas['tamanho'];
         $marca = $linhas['marca'];
+        $contato = $linhas['contato'];
 
         echo "<tr>
                 <td>$data_validade</td>
@@ -55,6 +57,7 @@
                 <td>$tipo</td>
                 <td>$tamanho</td>
                 <td>$marca</td>
+                <td>$contato</td>
                 <td><a href ='aprovação_script.php?id_doação=$id_doação' class='btn btn-success'>Aprovar</a>
                     <a href ='#' class='btn btn-danger'>Negar</a></td>
             </tr>";

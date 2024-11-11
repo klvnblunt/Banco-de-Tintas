@@ -39,6 +39,7 @@
 
       while ($linhas = mysqli_fetch_assoc($doacao)) {
         $data_validade = date('d/m/Y', strtotime($linhas['data_validade']));
+        $id_doação = $linhas['id_doação'];
         $qt_litro = $linhas['qt_litro'];
         $qt_latas = $linhas['qt_latas'];
         $cor = $linhas['cor'];
@@ -54,6 +55,7 @@
                 <td>$tipo</td>
                 <td>$tamanho</td>
                 <td>$marca</td>
+                <td><a href ='aprovação_beneficiario.php?id_doação=$id_doação' class='btn btn-primary'>Solicitar doação</a>
             </tr>";
       }
 

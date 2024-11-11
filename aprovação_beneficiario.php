@@ -26,7 +26,7 @@
                     $id_doação = $_GET['id_doação'];
 
                     // Consulta para obter a linha da tabela 'doacao'
-                    $sql = "SELECT * FROM doacao WHERE id_doação = $id_doação";
+                    $sql = "SELECT * FROM aprovados_doacao WHERE id_doação = $id_doação";
                     $result = mysqli_query($conexao, $sql);
 
                     if ($result && mysqli_num_rows($result) > 0) {
@@ -43,11 +43,11 @@
                         $contato = $row['contato'];
 
                         // Inserir na tabela 'aprovados_doacao'
-                        $insert_sql = "INSERT INTO aprovados_doacao (data_validade, qt_litro, qt_latas, cor, tipo, tamanho, marca, contato) 
+                        $insert_sql = "INSERT INTO aprovados_beneficiario (data_validade, qt_litro, qt_latas, cor, tipo, tamanho, marca, contato) 
                                     VALUES ('$data_validade', '$qt_litro', '$qt_latas', '$cor', '$tipo', '$tamanho', '$marca', '$contato')";
 
                         if (mysqli_query($conexao, $insert_sql)){
-                            $delete_sql = "DELETE FROM doacao WHERE id_doação =$id_doação";
+                            $delete_sql = "DELETE FROM aprovados_doacao WHERE id_doação =$id_doação";
                             if (mysqli_query($conexao, $delete_sql)) {
                             echo mensagem("Doação aprovada com sucesso!", 'success');
                             } else {
@@ -63,8 +63,8 @@
 
                 mysqli_close($conexao);
                 ?>
-                <a href="painel_doador.php" class="btn btn-primary">Voltar para o paínel de doação</a>
-                <a href="tela_inicial_adm.php" class="btn btn-primary">Voltar para a tela inicial</a>
+                <a href="beneficiario.php" class="btn btn-primary">Voltar para o paínel de beneficiario</a>
+                <a href="tela_inicial.php" class="btn btn-primary">Voltar para a tela inicial</a>
         </div>
     </div>
     
