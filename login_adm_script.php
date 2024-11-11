@@ -2,7 +2,7 @@
 session_start();
 include_once "conexao.php";
 
-// Capturar e limpar os dados do formulário
+
 $email = trim($_POST['email']);
 $senha = trim($_POST['senha']);
 

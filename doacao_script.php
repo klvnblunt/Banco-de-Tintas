@@ -14,7 +14,7 @@
         </div>
   </nav>
   <div class="container">
-    <div class="row">
+    <div class="">
       <?php
       include_once "conexao.php";
       if (!$conexao) {
@@ -30,13 +30,14 @@
           $tipo_tinta = isset($_POST['tipo_tinta']) ? $_POST['tipo_tinta'] : null;
           $tm_embalagem = isset($_POST['tm_embalagem']) ? $_POST['tm_embalagem'] : null;
           $marca = isset($_POST['marca']) ? $_POST['marca'] : null;
+          $contato = isset($_POST['contato']) ? $_POST['contato'] : null;
 
           $result = mysqli_query($conexao, "INSERT INTO `doacao`
-                      (`data_validade`, `qt_litro`, `qt_latas`, `cor`, `tipo`, `tamanho`, `marca`) 
-                      VALUES ('$data_validade', '$litro', '$qt_latas', '$cor', '$tipo_tinta', '$tm_embalagem', '$marca')");
+                      (`data_validade`, `qt_litro`, `qt_latas`, `cor`, `tipo`, `tamanho`, `marca`, `contato`) 
+                      VALUES ('$data_validade', '$litro', '$qt_latas', '$cor', '$tipo_tinta', '$tm_embalagem', '$marca', '$contato')");
 
           if ($result) {
-              echo mensagem("Doação feita com sucesso", 'success');
+              echo mensagem("Sua doação foi enviado para análise. Entraremos em contato informando os pontos de coletas e horarios caso a doação seja aprovada.", 'success');
           } else {
               echo "Erro ao executar a consulta: " . mysqli_error($conexao);
           }

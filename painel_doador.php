@@ -38,6 +38,7 @@
       $doacao = mysqli_query($conexao, $sql);
 
       while ($linhas = mysqli_fetch_assoc($doacao)) {
+        $id_doação = $linhas['id_doação'];
         $data_validade = date('d/m/Y', strtotime($linhas['data_validade']));
         $qt_litro = $linhas['qt_litro'];
         $qt_latas = $linhas['qt_latas'];
@@ -54,9 +55,10 @@
                 <td>$tipo</td>
                 <td>$tamanho</td>
                 <td>$marca</td>
+                <td><a href ='aprovação_script.php?id_doação=$id_doação' class='btn btn-success'>Aprovar</a>
+                    <a href ='#' class='btn btn-danger'>Negar</a></td>
             </tr>";
       }
-
     ?>
    </tbody>
     </div>
