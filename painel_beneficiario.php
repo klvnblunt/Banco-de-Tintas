@@ -55,7 +55,8 @@
                 <td>$tipo</td>
                 <td>$tamanho</td>
                 <td>$marca</td>
-                <td><a href ='aprovação_beneficiario.php?id_doação=$id_doação' class='btn btn-primary'>Solicitar doação</a>
+                <td><a href ='#' class='btn btn-success'>Aprovar</a>
+                    <a href ='#' class='btn btn-danger'>Negar</a></td>
             </tr>";
       }
 

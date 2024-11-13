@@ -16,7 +16,9 @@
     </nav>
     <div class="container">
         <a class="btn btn-primary" href="painel_doador.php" role="button">Paínel de Doação</a>
-        <a class="btn btn-primary" href="painel_beneficiario.php" role="button">Paínel de beneficiario</a>
+        <a class="btn btn-primary" href="painel_beneficiario.php" role="button">Paínel de beneficiario</a><br><br>
+        <a class="btn btn-primary" href="#" role="button">Historico de doação</a>
+        <a class="btn btn-primary" href="#" role="button">Historico de beneficiario</a><br>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

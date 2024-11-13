@@ -115,7 +115,11 @@
                 <input type="text" name="marca" class="form-control" id="marca" placeholder="" required>
             </div><br>
             <div class="mb-3">
-                <label for="contato" class="form-label">Contato para retorno da doação</label>
+                <label for="contato" class="form-label">Nome do doador</label>
+                <input type="text" name="nome" class="form-control" id="nome" placeholder="" required>
+            </div><br>
+            <div class="mb-3">
+                <label for="contato" class="form-label">Número de telefone para contato</label>
                 <input type="text" name="contato" class="form-control" id="contato" placeholder="" required>
             </div><br>
             <div class="mb-3">

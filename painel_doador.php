@@ -29,6 +29,7 @@
       <th scope="col">Tipo de Tinta</th>
       <th scope="col">Tamanho da Lata</th>
       <th scope="col">Marca</th>
+      <th scope="col">Nome</th>
       <th scope="col">Contato</th>
     </tr>
   </thead>
@@ -47,6 +48,7 @@
         $tipo = $linhas['tipo'];
         $tamanho = $linhas['tamanho'];
         $marca = $linhas['marca'];
+        $nome = $linhas['nome'];
         $contato = $linhas['contato'];
 
         echo "<tr>
@@ -57,9 +59,10 @@
                 <td>$tipo</td>
                 <td>$tamanho</td>
                 <td>$marca</td>
+                <td>$nome</td>
                 <td>$contato</td>
                 <td><a href ='aprovação_script.php?id_doação=$id_doação' class='btn btn-success'>Aprovar</a>
-                    <a href ='#' class='btn btn-danger'>Negar</a></td>
+                    <a href ='deletar_doação_script.php?id_doação=$id_doação' class='btn btn-danger'>Negar</a></td>
             </tr>";
       }
     ?>

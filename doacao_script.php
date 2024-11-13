@@ -30,11 +30,12 @@
           $tipo_tinta = isset($_POST['tipo_tinta']) ? $_POST['tipo_tinta'] : null;
           $tm_embalagem = isset($_POST['tm_embalagem']) ? $_POST['tm_embalagem'] : null;
           $marca = isset($_POST['marca']) ? $_POST['marca'] : null;
+          $nome = isset($_POST['nome']) ? $_POST['nome'] : null;
           $contato = isset($_POST['contato']) ? $_POST['contato'] : null;
 
           $result = mysqli_query($conexao, "INSERT INTO `doacao`
-                      (`data_validade`, `qt_litro`, `qt_latas`, `cor`, `tipo`, `tamanho`, `marca`, `contato`) 
-                      VALUES ('$data_validade', '$litro', '$qt_latas', '$cor', '$tipo_tinta', '$tm_embalagem', '$marca', '$contato')");
+                      (`data_validade`, `qt_litro`, `qt_latas`, `cor`, `tipo`, `tamanho`, `marca`, `nome`, `contato`) 
+                      VALUES ('$data_validade', '$litro', '$qt_latas', '$cor', '$tipo_tinta', '$tm_embalagem', '$marca', '$nome', '$contato')");
 
           if ($result) {
               echo mensagem("Sua doação foi enviado para análise. Entraremos em contato informando os pontos de coletas e horarios caso a doação seja aprovada.", 'success');

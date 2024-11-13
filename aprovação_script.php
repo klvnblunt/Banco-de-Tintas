@@ -49,7 +49,7 @@
                         if (mysqli_query($conexao, $insert_sql)){
                             $delete_sql = "DELETE FROM doacao WHERE id_doação =$id_doação";
                             if (mysqli_query($conexao, $delete_sql)) {
-                            echo mensagem("Doação aprovada com sucesso!", 'success');
+                            echo mensagem("Doação aprovada com sucesso! Entre em contato com o doador para informar os pontos de coleta", 'success');
                             } else {
                             echo "Erro ao aprovar a doação: " . mysqli_error($conexao);
                             }
