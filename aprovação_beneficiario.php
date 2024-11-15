@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,8 +21,12 @@
                 include('protecao.php');
                 include_once "conexao.php";
 
-                if (isset($_GET['id_doação'])) {
-                    $id_doação = $_GET['id_doação'];
+                if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+                    var_dump($_POST['id_doação']);
+                    $id_doação = $_POST['id_doação']; 
+                    $nome = $_POST['nome'];
+                    $telefone = $_POST['telefone'];
 
                     // Consulta para obter a linha da tabela 'doacao'
                     $sql = "SELECT * FROM aprovados_doacao WHERE id_doação = $id_doação";
@@ -49,7 +52,7 @@
                         if (mysqli_query($conexao, $insert_sql)){
                             $delete_sql = "DELETE FROM aprovados_doacao WHERE id_doação =$id_doação";
                             if (mysqli_query($conexao, $delete_sql)) {
-                            echo mensagem("Sua doação foi enviado para análise. Entraremos em contato informando os pontos de coletas e horarios caso o seu pedido seja aceito.", 'success');;
+                            echo mensagem("Sua doação foi enviado para análise. Entraremos em contato informando os pontos de coletas e horarios caso o seu pedido seja aceito.", 'success');
                             } else {
                             echo "Erro ao aprovar a doação: " . mysqli_error($conexao);
                             }
@@ -58,7 +61,7 @@
                             }
                         }
                     } else {
-                    echo "ID não fornecido.";
+                    echo mensagem ("ID não fornecido.", 'success');
                 }
 
                 mysqli_close($conexao);

@@ -29,6 +29,7 @@
       <th scope="col">Tipo de Tinta</th>
       <th scope="col">Tamanho da Lata</th>
       <th scope="col">Marca</th>
+      <th scope="col">Contato</th>
     </tr>
   </thead>
   <tbody>
@@ -55,6 +56,15 @@
                 <td>$tipo</td>
                 <td>$tamanho</td>
                 <td>$marca</td>
+                <td><form action='aprovação_beneficiario.php?id_doação=$id_doacao' method='post'>
+                        <input type='hidden' name='id_doacao' value='<?php echo $id_doacao; ?>'>
+                        <input type='text' class='form-control' name='nome' placeholder='Nome' required>
+                        </div>
+                        <div class='mb-2'>
+                          <input type='tel' class='form-control' name='telefone' placeholder='Telefone' required>
+                        </div>
+                        <button type='submit' class='btn btn-success'>Enviar Solicitação</button>
+                      </form></td>
                 <td><a href ='aprovação_beneficiario.php?id_doação=$id_doação' class='btn btn-primary'>Solicitar doação</a>
             </tr>";
       }
