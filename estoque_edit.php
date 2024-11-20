@@ -129,7 +129,7 @@
             </div><br>
             <div class="mb-3">
                 <label for="marca" class="form-label">Informe a marca da tinta:</label>
-                <input type="text" name="marca" class="form-control" id="marca" placeholder="" required  value="<?php echo $linha ['nome']; ?>">
+                <input type="text" name="marca" class="form-control" id="marca" placeholder="" required  value="<?php echo $linha ['marca']; ?>">
             </div><br>
             <div class="mb-3">
                 <label for="contato" class="form-label">Nome do doador</label>

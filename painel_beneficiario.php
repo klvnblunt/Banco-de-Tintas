@@ -61,7 +61,7 @@
                 <td>$marca</td>
                 <td>$nome</td>
                 <td>$contato</td>
-                <td><a href ='aprovação_beneficiario_adm.php' class='btn btn-success'>Aprovar</a>
+                <td><a href ='aprovação_beneficiario_adm.php?id_doação=$id_doação' class='btn btn-success'>Aprovar</a>
                     <a href ='deletar_beneficiario_script.php?id_doação=$id_doação' class='btn btn-danger'>Negar</a></td>
             </tr>";
       }
