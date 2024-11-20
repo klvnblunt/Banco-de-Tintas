@@ -32,7 +32,7 @@
                     if ($result && mysqli_num_rows($result) > 0) {
                         $row = mysqli_fetch_assoc($result);
 
-                        // Preparar os dados para a inserção
+
                         $data_validade = $row['data_validade'];
                         $qt_litro = $row['qt_litro'];
                         $qt_latas = $row['qt_latas'];
@@ -40,11 +40,11 @@
                         $tipo = $row['tipo'];
                         $tamanho = $row['tamanho'];
                         $marca = $row['marca'];
+                        $nome = $row['nome'];
                         $contato = $row['contato'];
 
-                        // Inserir na tabela 'aprovados_doacao'
-                        $insert_sql = "INSERT INTO aprovados_doacao (data_validade, qt_litro, qt_latas, cor, tipo, tamanho, marca, contato) 
-                                    VALUES ('$data_validade', '$qt_litro', '$qt_latas', '$cor', '$tipo', '$tamanho', '$marca', '$contato')";
+                        $insert_sql = "INSERT INTO aprovados_doacao (data_validade, qt_litro, qt_latas, cor, tipo, tamanho, marca, nome, contato) 
+                                    VALUES ('$data_validade', '$qt_litro', '$qt_latas', '$cor', '$tipo', '$tamanho', '$marca', '$nome', '$contato')";
 
                         if (mysqli_query($conexao, $insert_sql)){
                             $delete_sql = "DELETE FROM doacao WHERE id_doação =$id_doação";

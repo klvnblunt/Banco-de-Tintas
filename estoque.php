@@ -31,17 +31,18 @@
       <th scope="col">Marca</th>
       <th scope="col">Nome</th>
       <th scope="col">Contato</th>
+      <th scope="col">Editar</th>
     </tr>
   </thead>
   <tbody>
   <?php
       include_once "conexao.php";
-      $sql = 'SELECT * FROM aprovados_beneficiario';
+      $sql = 'SELECT * FROM aprovados_doacao';
       $doacao = mysqli_query($conexao, $sql);
 
       while ($linhas = mysqli_fetch_assoc($doacao)) {
-        $id_doação = $linhas['id_doação'];
         $data_validade = date('d/m/Y', strtotime($linhas['data_validade']));
+        $id_doação = $linhas['id_doação'];
         $qt_litro = $linhas['qt_litro'];
         $qt_latas = $linhas['qt_latas'];
         $cor = $linhas['cor'];
@@ -61,8 +62,7 @@
                 <td>$marca</td>
                 <td>$nome</td>
                 <td>$contato</td>
-                <td><a href ='aprovação_beneficiario_adm.php' class='btn btn-success'>Aprovar</a>
-                    <a href ='deletar_beneficiario_script.php?id_doação=$id_doação' class='btn btn-danger'>Negar</a></td>
+                <td><a href='estoque_edit.php?id_doação=$id_doação' class = 'btn btn-info'>Editar</td>
             </tr>";
       }
 

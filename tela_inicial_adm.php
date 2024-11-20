@@ -17,7 +17,7 @@
     <div class="container">
         <a class="btn btn-primary" href="painel_doador.php" role="button">Paínel de Doação</a>
         <a class="btn btn-primary" href="painel_beneficiario.php" role="button">Paínel de beneficiario</a><br><br>
-        <a class="btn btn-primary" href="#" role="button">Estoque no Bando de Tintas</a>
+        <a class="btn btn-primary" href="estoque.php" role="button">Estoque no Bando de Tintas</a>
         <a class="btn btn-primary" href="#" role="button">Historico de Doação</a><br>
 
     </div>

@@ -23,8 +23,8 @@
 
                 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-                    var_dump($_POST['id_doação']);
-                    $id_doação = $_POST['id_doação']; 
+                    //var_dump($_GET['id_doação']);
+                    $id_doação = $_GET['id_doação']; 
                     $nome = $_POST['nome'];
                     $telefone = $_POST['telefone'];
 
@@ -43,16 +43,17 @@
                         $tipo = $row['tipo'];
                         $tamanho = $row['tamanho'];
                         $marca = $row['marca'];
-                        $contato = $row['contato'];
+                        $nome = trim($_POST['nome']);
+                        $telefone = trim($_POST['telefone']);
 
                         // Inserir na tabela 'aprovados_doacao'
-                        $insert_sql = "INSERT INTO aprovados_beneficiario (data_validade, qt_litro, qt_latas, cor, tipo, tamanho, marca, contato) 
-                                    VALUES ('$data_validade', '$qt_litro', '$qt_latas', '$cor', '$tipo', '$tamanho', '$marca', '$contato')";
+                        $insert_sql = "INSERT INTO aprovados_beneficiario (data_validade, qt_litro, qt_latas, cor, tipo, tamanho, marca, nome, contato) 
+                                    VALUES ('$data_validade', '$qt_litro', '$qt_latas', '$cor', '$tipo', '$tamanho', '$marca', '$nome', '$telefone')";
 
                         if (mysqli_query($conexao, $insert_sql)){
                             $delete_sql = "DELETE FROM aprovados_doacao WHERE id_doação =$id_doação";
                             if (mysqli_query($conexao, $delete_sql)) {
-                            echo mensagem("Sua doação foi enviado para análise. Entraremos em contato informando os pontos de coletas e horarios caso o seu pedido seja aceito.", 'success');
+                            echo mensagem("Sua solicitação foi enviado para análise. Entraremos em contato informando caso seja aprovada.", 'success');
                             } else {
                             echo "Erro ao aprovar a doação: " . mysqli_error($conexao);
                             }
