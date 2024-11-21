@@ -37,7 +37,7 @@
                 }
                 ?>
 
-                <a href="painel_doador.php" class="btn btn-primary">Voltar para o paínel de doação</a>
+                <a href="painel_beneficiario.php" class="btn btn-primary">Voltar para o paínel de doação</a>
                 <a href="tela_inicial_adm.php" class="btn btn-primary">Voltar para a tela inicial</a>
         </div>
     </div>
