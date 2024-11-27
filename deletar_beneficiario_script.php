@@ -19,25 +19,50 @@
     <div class ="container">
         <div class = "">
             <?php
-                include('conexao.php'); 
+                include('protecao.php');
+                include_once "conexao.php";
 
                 if (isset($_GET['id_doação'])) {
                     $id_doação = $_GET['id_doação'];
-                    
-                    $sql = "DELETE FROM aprovados_beneficiario WHERE id_doação = '$id_doação'";
-                    
-                    if (mysqli_query($conexao, $sql)) {
-                        echo mensagem( "Registro excluído com sucesso.", 'success');
-                        
-                    } else {
-                        echo "Erro ao excluir registro: " . mysqli_error($conexao);
-                    }
-                } else {
-                    echo "ID de doação não fornecido.";
-                }
-                ?>
 
-                <a href="painel_beneficiario.php" class="btn btn-primary">Voltar para o paínel de doação</a>
+                    // Consulta para obter a linha da tabela 'doacao'
+                    $sql = "SELECT * FROM aprovados_beneficiario WHERE id_doação = $id_doação";
+                    $result = mysqli_query($conexao, $sql);
+
+                    if ($result && mysqli_num_rows($result) > 0) {
+                        $row = mysqli_fetch_assoc($result);
+
+
+                        $data_validade = $row['data_validade'];
+                        $qt_litro = $row['qt_litro'];
+                        $qt_latas = $row['qt_latas'];
+                        $cor = $row['cor'];
+                        $tipo = $row['tipo'];
+                        $tamanho = $row['tamanho'];
+                        $marca = $row['marca'];
+    
+
+                        $insert_sql = "INSERT INTO aprovados_doacao (data_validade, qt_litro, qt_latas, cor, tipo, tamanho, marca) 
+                                    VALUES ('$data_validade', '$qt_litro', '$qt_latas', '$cor', '$tipo', '$tamanho', '$marca')";
+
+                        if (mysqli_query($conexao, $insert_sql)){
+                            $delete_sql = "DELETE FROM aprovados_beneficiario WHERE id_doação =$id_doação";
+                            if (mysqli_query($conexao, $delete_sql)) {
+                            echo mensagem("Doação aprovada com sucesso! Entre em contato com o doador para informar os pontos de coleta", 'success');
+                            } else {
+                            echo "Erro ao aprovar a doação: " . mysqli_error($conexao);
+                            }
+                            } else {
+                                echo "Registro não encontrado.";
+                            }
+                        }
+                    } else {
+                    echo "ID não fornecido.";
+                }
+
+                mysqli_close($conexao);
+                ?>
+                <a href="painel_doador.php" class="btn btn-primary">Voltar para o paínel de doação</a>
                 <a href="tela_inicial_adm.php" class="btn btn-primary">Voltar para a tela inicial</a>
         </div>
     </div>
