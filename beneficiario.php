@@ -56,7 +56,7 @@
                 <td>$tipo</td>
                 <td>$tamanho</td>
                 <td>$marca</td>
-                <td><form action='aprovação_beneficiario.php?id_doação=$id_doação' method='post'>
+                <td><form action='solicitação_beneficiario.php?id_doação=$id_doação' method='post'>
                         <input type='hidden' name='id_doacao' value='<?php echo $id_doação; ?>'>
                         <input type='text' class='form-control' name='nome' placeholder='Nome' required>
                         </div>
